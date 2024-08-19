@@ -73,6 +73,9 @@ docker run -v $(pwd):/app agentmaddy/yt-transcription python app.py -o docker_tu
 - **Invalid API Key**: Ensure your `.env` file is correctly set up with a valid AssemblyAI API key.
 - **Permission Issues**: If you encounter permission issues when running the Docker container, try running the command with `sudo`.
 
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ### Summary of the Steps:
 
@@ -81,3 +84,5 @@ docker run -v $(pwd):/app agentmaddy/yt-transcription python app.py -o docker_tu
 3. **Run the Docker Container**: Execute the Docker command with your desired output file name and YouTube URL.
 
 This documentation provides a comprehensive guide on how to set up and use your Dockerized YouTube transcription project. You can add this content to your `README.md` file in your GitHub repository to guide users through the process. Let me know if you need further assistance!
+
+
