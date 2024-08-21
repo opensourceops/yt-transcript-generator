@@ -38,19 +38,19 @@ Follow these steps to pull the Docker image and run the transcription process:
 1. **Pull the Docker Image**:
    - Pull the pre-built Docker image from Docker Hub using the following command:
      ```bash
-     docker pull agentmaddy/yt-transcription
+     docker pull opensourceops/yt-transcriptor
      ```
 
 2. **Run the Docker Container**:
    - Use the following command to run the Docker container. This command mounts your current directory to the `/app` directory inside the container and runs the transcription script.
    - Replace `FILE_NAME` with your desired output file name and the YouTube URL with the URL of the video you want to transcribe.
      ```bash
-     docker run -v $(pwd):/app agentmaddy/yt-transcription python app.py -o FILE_NAME --urls https://www.youtube.com/watch?v=KUECJHlV1LE
+     docker run -v $(pwd):/app opensourceops/yt-transcriptor python app.py -o FILE_NAME --urls https://www.youtube.com/watch?v=KUECJHlV1LE
      ```
 
    - **Explanation**:
      - `-v $(pwd):/app`: Mounts the current directory on your local machine to the `/app` directory inside the Docker container. This allows the container to save output files directly to your local directory.
-     - `agentmaddy/yt-transcription`: The Docker image you pulled from Docker Hub.
+     - `opensourceops/yt-transcriptor`: The Docker image you pulled from Docker Hub.
      - `python app.py -o FILE_NAME --urls https://www.youtube.com/watch?v=KUECJHlV1LE`: The command run inside the container, where `app.py` processes the YouTube video, extracts the audio, and generates a transcription.
 
 3. **Accessing the Output**:
@@ -62,7 +62,7 @@ Follow these steps to pull the Docker image and run the transcription process:
 To transcribe a YouTube video with the title "How to Dockerize Your Python Applications", you would run the following:
 
 ```bash
-docker run -v $(pwd):/app agentmaddy/yt-transcription python app.py -o docker_tutorial --urls https://www.youtube.com/watch?v=KUECJHlV1LE
+docker run -v $(pwd):/app opensourceops/yt-transcriptor python app.py -o docker_tutorial --urls https://www.youtube.com/watch?v=KUECJHlV1LE
 ```
 
 - This command will download the video, extract the audio, and save the transcription as `docker_tutorial_transcript.txt` in your current directory.
@@ -80,7 +80,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 ### Summary of the Steps:
 
 1. **Set Up AssemblyAI**: Sign up, obtain an API key, and create a `.env` file with the API key.
-2. **Pull Docker Image**: Use `docker pull agentmaddy/yt-transcription` to get the image.
+2. **Pull Docker Image**: Use `docker pull opensourceops/yt-transcriptor` to get the image.
 3. **Run the Docker Container**: Execute the Docker command with your desired output file name and YouTube URL.
 
 This documentation provides a comprehensive guide on how to set up and use your Dockerized YouTube transcription project. You can add this content to your `README.md` file in your GitHub repository to guide users through the process. Let me know if you need further assistance!
